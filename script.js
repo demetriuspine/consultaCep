@@ -1,5 +1,6 @@
 window.onload = () => {
   const cep = document.querySelector('#cep');
+  const button = document.querySelector('.btn');
 
   const insertValues = (resultsFromApi) => {
     const resultsFromApiKeys = Object.keys(resultsFromApi);
@@ -11,7 +12,7 @@ window.onload = () => {
     }
   };
 
-  cep.addEventListener('blur', async () => {
+  button.addEventListener('click', async () => {
     const search = cep.value.replace('-', '');
     const options = {
       method: 'GET',
