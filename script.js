@@ -24,7 +24,7 @@ window.onload = () => {
       const jsonParsing = await fetching.json();
       insertValues(jsonParsing);
     } catch (err) {
-      console.log(`'Deu erro:  ${err}`);
+      throw new Error(`'Deu erro:  ${err}`);
     }
   });
 };
